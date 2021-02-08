@@ -1,0 +1,32 @@
+{
+	"name": "festivalmusica",
+	"version": "1.0.0",
+	"description": "Music fest webpage integrating Gulp, SASS and other languages",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"keywords": [
+		"Music",
+		"Webpage",
+		"Web",
+		"Development",
+		"SASS",
+		"JS",
+		"HTML",
+		"CSS",
+		"Gulp",
+		"Concert",
+		"Festival"
+	],
+	"author": "Adolfo Pastelin Enciso",
+	"license": "ISC",
+	"devDependencies": {
+		"gulp": "^4.0.2",
+		"gulp-sass": "^4.1.0"
+	}
+}
