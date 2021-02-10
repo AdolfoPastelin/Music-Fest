@@ -27,7 +27,8 @@
 			font-size: 2rem;
 			text-align: center;
 			text-shadow: $sombraTitulo2;
-			margin-right: 3rem;
+			margin-right: 1.5rem;
+			margin-left: 1.5rem;
 
 			@include miniTelefono {
 				padding-top: $separacion - 3.5;
