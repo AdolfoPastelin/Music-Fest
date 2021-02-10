@@ -9,6 +9,9 @@ const sass = require('gulp-sass');
 function css() {
 	return src('src/scss/main.scss')
 		.pipe(sass())
+		// .pipe(sass({
+		// 	outputStyle: 'expanded' //muestra una compilacion detallada
+		// }))
 		.pipe(dest('build/css'))
 }
 
