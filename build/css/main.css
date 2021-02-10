@@ -434,6 +434,9 @@ h3 {
       gap: 5rem; } }
   .festival__about .festival__contenido {
     justify-content: center; }
+    @media (min-width: 480px) {
+      .festival__about .festival__contenido h2 {
+        margin-top: 5rem; } }
     .festival__about .festival__contenido h2 {
       font-size: 3rem; }
     .festival__about .festival__contenido .fecha {

@@ -12,6 +12,12 @@
 	.festival__contenido {
 		justify-content: center;
 
+		@include telefono {
+			h2 {
+				margin-top: $separacion;
+			}
+		}
+
 		h2 {
 			font-size: 3rem;
 		}
