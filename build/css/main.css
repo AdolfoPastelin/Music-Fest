@@ -420,3 +420,24 @@ h3 {
   .video video {
     display: block;
     width: 100%; }
+
+.festival__about {
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  @media (min-width: 768px) {
+    .festival__about {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5rem; } }
+  .festival__about .festival__contenido {
+    justify-content: center; }
+    .festival__about .festival__contenido h2 {
+      font-size: 3rem; }
+    .festival__about .festival__contenido .fecha {
+      color: #F53756;
+      font-weight: bold; }
+    .festival__about .festival__contenido .texto {
+      line-height: 1.5; }
