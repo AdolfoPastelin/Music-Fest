@@ -368,9 +368,55 @@ h3 {
       font-size: 2rem;
       text-align: center;
       text-shadow: 0 0.1rem 0.1rem #000;
-      margin-right: 3rem; }
+      margin-right: 1.5rem;
+      margin-left: 1.5rem; }
       @media (max-width: 479px) {
         .header .header__navegacion-principal a {
           padding-top: 1.5rem; } }
       .header .header__navegacion-principal a:hover {
         color: #FEF46D; }
+
+.video {
+  position: relative;
+  max-height: 50rem;
+  overflow: hidden; }
+  .video .video__overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#11815c+22,1b7bc4+22,a92cd6+89&0.5+14,0.7+85 */
+    background: -moz-linear-gradient(-45deg, rgba(27, 123, 196, 0.6) 14%, rgba(27, 123, 196, 0.6) 22%, rgba(161, 49, 213, 0.6) 85%, rgba(169, 44, 214, 0.6) 89%);
+    /* FF3.6-15 */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(14%, rgba(27, 123, 196, 0.6)), color-stop(22%, rgba(27, 123, 196, 0.6)), color-stop(85%, rgba(161, 49, 213, 0.6)), color-stop(89%, rgba(169, 44, 214, 0.6)));
+    /* Chrome4-9,Safari4-5 */
+    background: -webkit-linear-gradient(-45deg, rgba(27, 123, 196, 0.6) 14%, rgba(27, 123, 196, 0.6) 22%, rgba(161, 49, 213, 0.6) 85%, rgba(169, 44, 214, 0.6) 89%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: -o-linear-gradient(-45deg, rgba(27, 123, 196, 0.6) 14%, rgba(27, 123, 196, 0.6) 22%, rgba(161, 49, 213, 0.6) 85%, rgba(169, 44, 214, 0.6) 89%);
+    /* Opera 11.10-11.50 */
+    background: -ms-linear-gradient(-45deg, rgba(27, 123, 196, 0.6) 14%, rgba(27, 123, 196, 0.6) 22%, rgba(161, 49, 213, 0.6) 85%, rgba(169, 44, 214, 0.6) 89%);
+    /* IE10 preview */
+    background: linear-gradient(135deg, rgba(27, 123, 196, 0.6) 14%, rgba(27, 123, 196, 0.6) 22%, rgba(161, 49, 213, 0.6) 85%, rgba(169, 44, 214, 0.6) 89%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#801b7bc4', endColorstr='#b3a92cd6',GradientType=1 );
+    /* IE6-9 fallback on horizontal gradient */ }
+  .video .video__contenido {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 100; }
+    .video .video__contenido h2 {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      color: #FFF;
+      font-size: 6rem;
+      text-shadow: 0 0.1rem 0.2rem #000; }
+      .video .video__contenido h2 span {
+        background-color: #F53756;
+        font-size: 2rem;
+        padding: 1rem 2rem;
+        text-shadow: 0 0.1rem 0.1rem #000; }
+  .video video {
+    display: block;
+    width: 100%; }
