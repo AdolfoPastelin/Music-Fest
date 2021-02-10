@@ -3,26 +3,35 @@
 
 	.header__contenido {
 		padding: $separacion - 2 0;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
 		text-shadow: $sombraTitulo1;
+
+		@include telefono {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
 	}
 
 	h1 {
 		color: $blanco;
+		text-align: center;
 	}
 
 	.header__navegacion-principal {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 3rem;
-		
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
 		a {
 			color: $blanco;
 			font-size: 2rem;
 			text-align: center;
 			text-shadow: $sombraTitulo2;
+			margin-right: 3rem;
+
+			@include miniTelefono {
+				padding-top: $separacion - 3.5;
+			}
 
 			&:hover {
 				color: $amarillo;
