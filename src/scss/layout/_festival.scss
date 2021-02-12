@@ -4,6 +4,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin-bottom: $separacion;
 
 	@include tablet {
 		@include gridTemplate(2, $separacion);
