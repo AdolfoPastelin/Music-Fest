@@ -309,6 +309,8 @@ html {
   box-sizing: border-box; }
 
 *,
+*::before,
+*::after,
 *:before,
 *:after {
   box-sizing: inherit; }
@@ -346,8 +348,14 @@ h2 {
 h3 {
   font-size: 3rem; }
 
+.bg-morado {
+  background-color: #9269D3; }
+
+.bg-azul {
+  background-color: #4F88F1; }
+
 .header {
-  background-color: #11815c; }
+  background-color: #222; }
   .header .header__contenido {
     padding: 3rem 0;
     text-shadow: 0 0.1rem 0.2rem #000; }
@@ -413,7 +421,7 @@ h3 {
       font-size: 6rem;
       text-shadow: 0 0.1rem 0.2rem #000; }
       .video .video__contenido h2 span {
-        background-color: #F53756;
+        background-color: #CC213E;
         font-size: 2rem;
         padding: 1rem 2rem;
         text-shadow: 0 0.1rem 0.1rem #000; }
@@ -426,7 +434,8 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 5rem; }
   @media (min-width: 768px) {
     .festival__about {
       display: grid;
@@ -440,7 +449,61 @@ h3 {
     .festival__about .festival__contenido h2 {
       font-size: 3rem; }
     .festival__about .festival__contenido .fecha {
-      color: #F53756;
+      color: #CC213E;
       font-weight: bold; }
     .festival__about .festival__contenido .texto {
       line-height: 1.5; }
+
+.lineup {
+  padding: 5rem 0; }
+  .lineup h3,
+  .lineup p {
+    text-align: center;
+    color: #000;
+    margin-bottom: -1rem; }
+  .lineup .dia {
+    text-transform: uppercase;
+    margin: 5rem 0;
+    text-shadow: 0 0 0.1rem #777;
+    color: #CC213E;
+    font-weight: 400; }
+  @media (min-width: 768px) {
+    .lineup .lineup__escenarios {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5rem; } }
+  .lineup .lineup__escenarios .lineup__escenario {
+    padding-top: 2.5rem; }
+  .lineup .lineup__escenarios .lineup__escenario__nombre {
+    color: #000;
+    font-size: 2rem;
+    font-weight: 700; }
+    .lineup .lineup__escenarios .lineup__escenario__nombre::after {
+      content: '';
+      width: 20rem;
+      height: 10rem;
+      display: block;
+      margin: 2rem auto 0 auto;
+      color: #FFF;
+      background-size: 16rem;
+      background-repeat: no-repeat;
+      background-position: center center; }
+  .lineup .escenario--edm .lineup__escenario__nombre::after {
+    background-image: url("../img/icono_edm.png"); }
+  .lineup .escenario--rock .lineup__escenario__nombre::after {
+    background-image: url("../img/icono_rock.png"); }
+
+.lineup__calendario {
+  padding: 0;
+  list-style: none; }
+  .lineup__calendario li {
+    padding: 2.5rem;
+    font-weight: 700; }
+    .lineup__calendario li span {
+      font-weight: 400; }
+
+.bg-morado .lineup__calendario li:nth-child(odd) {
+  background-color: #8759ce; }
+
+.bg-azul .lineup__calendario li:nth-child(odd) {
+  background-color: #3c7bef; }

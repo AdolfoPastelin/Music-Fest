@@ -1,0 +1,80 @@
+.lineup {
+	padding: $separacion 0;
+
+	h3,
+	p {
+		text-align: center;
+		color: $negro;
+		margin-bottom: -1rem;
+	}
+
+	.dia {
+		text-transform: uppercase;
+		margin: $separacion 0; 
+		text-shadow: $sombraTitulo3;
+		color: $rosa;
+		font-weight: $regular;
+	}
+
+	.lineup__escenarios {
+		@include tablet {
+			@include gridTemplate(2, $separacion);
+		}
+
+		.lineup__escenario {
+			padding-top: $separacion / 2;
+		}
+
+		.lineup__escenario__nombre {
+			color: $negro;
+			font-size: 2rem;
+			font-weight: $bold;
+
+			&::after {
+				content: '';
+				width: 20rem;
+				height: 10rem;
+				display: block;
+				margin: 2rem auto 0 auto;
+				color: $blanco;
+				background-size: 16rem;
+				background-repeat: no-repeat;
+				background-position: center center;
+			}
+		}
+	}
+
+	.escenario--edm .lineup__escenario__nombre {
+		&::after {
+			background-image: url('../img/icono_edm.png');
+		}
+	}
+
+	.escenario--rock .lineup__escenario__nombre {
+		&::after {
+			background-image: url('../img/icono_rock.png');
+		}
+	}
+}
+
+.lineup__calendario {
+	padding: 0;
+	list-style: none;
+
+	li {
+		padding: $separacion / 2;
+		font-weight: $bold;
+
+		span {
+			font-weight: $regular;
+		}
+	}
+}
+
+.bg-morado .lineup__calendario li:nth-child(odd) {
+	background-color: darken($color: $morado, $amount: 4);
+}
+
+.bg-azul .lineup__calendario li:nth-child(odd) {
+	background-color: darken($color: $azul, $amount: 4);
+}
