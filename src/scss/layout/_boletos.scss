@@ -1,0 +1,60 @@
+.boletos {
+	padding: $separacion 0;
+
+	h3 {
+		text-align: center;
+		color: $negro;
+	}
+
+	.boletos__contenedor {
+		margin-top: $separacion / 2;
+		@include gridTemplate(2, $separacion);
+	}
+
+	.plan {
+		p {
+			color: $negro;
+			font-size: 3rem;
+			text-align: center;
+			margin-bottom: 2rem;
+		}
+	}
+}
+
+.pase {
+	width: 100%;
+
+	thead {
+		background-color: $rosa;
+		color: $blanco;
+		text-shadow: $sombraTitulo2;
+
+		th {
+			padding: $separacion / 4;
+			text-transform: uppercase;
+		}
+	}
+
+	tbody {
+		background-color: $blanco;
+		text-align: center;
+
+		td {
+			padding: $separacion - 3;
+			border: .1rem solid #e1e1e1;
+		}
+
+	}
+
+	tfoot {
+		background-color: $color-navbar;
+		color: $blanco;
+		text-align: center;
+		font-weight: bold;
+		text-shadow: $sombraTitulo2;
+
+		td {
+			padding: $separacion / 4;
+		}
+	}
+}
