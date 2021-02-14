@@ -9,6 +9,16 @@ const notify = require('gulp-notify'); //despliegue de notificaciones en consola
 const webp = require('gulp-webp'); // convierte imagenes a formato .webp
 const concat = require('gulp-concat');
 
+//* Utilidades CSS
+const autoprefixer = require('autoprefixer');
+const postcss = require('gulp-postcss');
+const cssnano = require('cssnano');
+const sourcemaps = require('gulp-sourcemaps');
+
+//* Utilidades JS
+const terser = require('gulp-terser-js');
+const rename = require('gulp-rename');
+
 //* objeto que almacenara datos que se repiten demasiado y que sería mejor solo cambiar en un sitio
 const paths = {
 	imagenes: './src/img/**/*',
@@ -20,29 +30,36 @@ const paths = {
 function css() {
 	return (
 		src(paths.scss)
+			.pipe(sourcemaps.init())
 			.pipe(sass())
 			// .pipe(sass({
 			// 	outputStyle: 'expanded' //muestra una compilacion detallada
 			// }))
+			.pipe(postcss([autoprefixer(), cssnano()]))
+			.pipe(sourcemaps.write('.'))
 			.pipe(dest('build/css'))
 	);
 }
 
-//* Función que minifica el código css
-function minificarCSS() {
-	return src(paths.scss)
-		.pipe(
-			sass({
-				outputStyle: 'compressed', //minifica el css compilado
-			})
-		)
-		.pipe(dest('build/css'));
-}
+// //* Función que minifica el código css | SITUACIONAL
+// function minificarCSS() {
+// 	return src(paths.scss)
+// 		.pipe(
+// 			sass({
+// 				outputStyle: 'compressed', //minifica el css compilado
+// 			})
+// 		)
+// 		.pipe(dest('build/css'));
+// }
 
 //* funcion que concatena varios archivos de JS en uno solo
 function javascript() {
 	return src(paths.js)
+		.pipe(sourcemaps.init())
 		.pipe(concat('bundle.js'))
+		.pipe(terser())
+		.pipe(sourcemaps.write('.'))
+		.pipe(rename({suffix: '.min'})) //agrega sufijo .min a archivos minificados
 		.pipe(dest('./build/js'))
 }
 
@@ -70,7 +87,7 @@ function watchArchivos() {
 }
 
 exports.css = css;
-exports.minificarCSS = minificarCSS;
+// exports.minificarCSS = minificarCSS; //se recomienda quitar SOLO cuando ya te tiene funcionando cssnano
 exports.watchArchivos = watchArchivos;
 exports.imagenes = imagenes;
 
