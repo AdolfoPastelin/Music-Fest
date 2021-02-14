@@ -71,9 +71,18 @@
 			font-size: 6rem;
 			text-shadow: $sombraTitulo1;
 
+			@include miniTelefono {
+				font-size: 4rem;
+			}
+
 			span {
 				background-color: $rosa;
 				font-size: 2rem;
+
+				@include miniTelefono {
+					font-size: 1.5rem;
+				}
+
 				padding: 1rem 2rem;
 				text-shadow: $sombraTitulo2;
 			}

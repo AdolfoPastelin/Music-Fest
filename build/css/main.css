@@ -422,11 +422,17 @@ h3 {
       color: #FFF;
       font-size: 6rem;
       text-shadow: 0 0.1rem 0.2rem #000; }
+      @media (max-width: 479px) {
+        .video .video__contenido h2 {
+          font-size: 4rem; } }
       .video .video__contenido h2 span {
         background-color: #CC213E;
         font-size: 2rem;
         padding: 1rem 2rem;
         text-shadow: 0 0.1rem 0.1rem #000; }
+        @media (max-width: 479px) {
+          .video .video__contenido h2 span {
+            font-size: 1.5rem; } }
   .video video {
     display: block;
     width: 100%; }
