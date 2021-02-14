@@ -8,6 +8,7 @@
 
 	.boletos__contenedor {
 		margin-top: $separacion / 2;
+		margin-bottom: $separacion / 2;
 		@include gridTemplate(2, $separacion);
 	}
 
