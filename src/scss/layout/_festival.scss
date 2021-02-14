@@ -1,10 +1,10 @@
 .festival__about {
-	padding: $separacion 0;
+	padding: $separacion * 2 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin-top: $separacion;
+	margin-top: $separacion * 2;
 
 	@include tablet {
 		@include gridTemplate(2, $separacion);
