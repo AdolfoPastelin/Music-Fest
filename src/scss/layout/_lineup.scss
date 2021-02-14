@@ -10,13 +10,15 @@
 
 	.dia {
 		text-transform: uppercase;
-		margin: $separacion 0; 
+		margin: $separacion 0;
 		text-shadow: $sombraTitulo3;
 		color: $rosa;
 		font-weight: $regular;
 	}
 
 	.lineup__escenarios {
+		width: 100%;
+
 		@include tablet {
 			@include gridTemplate(2, $separacion);
 		}
@@ -26,9 +28,10 @@
 		}
 
 		.lineup__escenario__nombre {
-			color: $negro;
+			color: $blanco;
 			font-size: 2rem;
 			font-weight: $bold;
+			text-shadow: $sombraTitulo2;
 
 			&::after {
 				content: '';
@@ -64,9 +67,14 @@
 	li {
 		padding: $separacion / 2;
 		font-weight: $bold;
+		display: flex;
+		justify-content: space-between;
+		text-shadow: $sombraTitulo3;
 
 		span {
 			font-weight: $regular;
+			color: $blanco;
+			text-shadow: $sombraTitulo1;
 		}
 	}
 }
