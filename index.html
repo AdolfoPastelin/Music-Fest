@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="Music Fest webpage">
-	<link rel="shortcut icon" type="image/x-icon" href="src/img/favicon.ico">
+	<link rel="shortcut icon" type="image/x-icon" href="build/img/favicon.ico">
 	<link rel="stylesheet" href="build/css/main.css">
 	<title>Music Fest - Rock & EDM Festival</title>
 </head>
@@ -18,9 +18,9 @@
 			<h1>Music Fest</h1>
 
 			<nav class="header__navegacion-principal">
-				<a href="#">Line up</a>
-				<a href="#">Galery</a>
-				<a href="#">Tickets</a>
+				<a href="#lineup">Line up</a>
+				<a href="#galery">Galery</a>
+				<a href="#tickets">Tickets</a>
 			</nav>
 		</div>
 	</header>
@@ -43,19 +43,23 @@
 
 	<div class="festival__about contenedor">
 		<div class="imagen">
-			<img src="build/img/imagen_vocalista.jpg" alt="imagen vocalista">
+			<picture>
+				<source loading="lazy" srcset="build/img/imagen_vocalista.webp" type="image/webp">
+				<img loading="lazy" src="build/img/imagen_vocalista.jpg" alt="imagen vocalista">
+			</picture>
 		</div>
 		<div class="festival__contenido">
 			<h2>Rock Festival</h2>
 			<p class="fecha">July 2021 Veracruz, Mexico</p>
-			<p class="texto">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, at inventore quia officiis
-				ducimus odit
-				a illo maxime voluptates officia quisquam rem dolor velit eaque beatae aspernatur excepturi aperiam
-				aliquam?</p>
+			<p class="texto">The oldest and most celebrated in the world. The Rock festival began in
+				1971 and has featured bands like Guns N' Roses, Red Hot Chili Peppers, Muse, The killers, etc. <br>
+				In the U.S., it is perhaps best remembered for the tragic death of nine fans who were
+				killed when the crowd rushed the stage during Pearl Jam’s 2000 performance. The Rock Festival
+				usually runs about a week from the end of June to the beginning of July. </p>
 		</div>
 	</div>
 
-	<section class="lineup">
+	<section id="lineup" class="lineup">
 		<h3>Line Up</h3>
 		<p class="dia">Friday 21st</p>
 		<div class="lineup__escenarios contenedor">
@@ -91,7 +95,7 @@
 				<ul class="lineup__calendario">
 					<li>24:00 <span>Red Hot Chilli Peppers</span></li>
 					<li>22:00 <span>The killers</span></li>
-					<li>20:00 <span>Deftones</span></li>
+					<li>20:00 <span>Guns N' Roses</span></li>
 					<li>19:00 <span>Limp Bizkit</span></li>
 					<li>18:00 <span>Papa Roach</span></li>
 					<li>17:00 <span>System of a Down</span></li>
@@ -112,13 +116,13 @@
 		</div>
 	</section> <!-- .lineup -->
 
-	<section class="galeria contenedor">
+	<section id="galery" class="galeria contenedor">
 		<h3>Galery</h3>
 
 		<ul class="galeria__imagenes"></ul>
 	</section> <!-- .galeria -->
 
-	<section class="boletos">
+	<section id="tickets" class="boletos">
 		<h3>Tickets</h3>
 
 		<div class="boletos__contenedor contenedor">
@@ -133,7 +137,7 @@
 
 					<tbody>
 						<tr>
-							<td>Total access to all music scenarios</td>
+							<td>Access to all music scenarios</td>
 						</tr>
 						<tr>
 							<td>Drink and food</td>
@@ -162,13 +166,16 @@
 							<td>Access to all music scenarios</td>
 						</tr>
 						<tr>
-							<td>Drink and food</td>
+							<td>Drinks and food</td>
 						</tr>
 						<tr>
 							<td>Special event T-Shirt</td>
 						</tr>
 						<tr>
-							<td>VIP access</td>
+							<td>VIP Access</td>
+						</tr>
+						<tr>
+							<td>Meet & greet</td>
 						</tr>
 					</tbody>
 
@@ -186,7 +193,7 @@
 		<p>Rock & EDM festival. All rights reserved&copy; 2021</p>
 	</footer>
 
-	<script src="build/js/bundle.js"></script>
+	<script src="build/js/bundle.min.js"></script>
 </body>
 
 </html>

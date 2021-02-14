@@ -17,6 +17,12 @@
 		text-align: center;
 	}
 
+	//selecciona clase header y clase fijo
+	&.fijo {
+		position: fixed;
+		width: 100%;
+	}
+
 	.header__navegacion-principal {
 		display: flex;
 		justify-content: center;
